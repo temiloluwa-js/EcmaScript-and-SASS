@@ -1,0 +1,1 @@
+//EcmaScript is next generation JavaScript
