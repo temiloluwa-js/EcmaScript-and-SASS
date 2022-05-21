@@ -1,4 +1,4 @@
-"use strict"
+
 // const TAX_RATE = 0.08;
 
 function calculateFInalAmmount(amount){
@@ -70,3 +70,37 @@ function User(){
         password: pass;
     }
 }
+
+function identify(){
+    return this.name.toUpperCase()
+}
+
+var me = {
+    name: 'Kyle'
+}
+
+console.log(identify.call(me))
+
+var age = 20
+function change(){
+    return this * 2
+}
+
+console.log(change.call(age))
+
+function foo(num){
+    console.log("foo:" + num);
+
+    foo.count++
+}
+
+foo.count = 0
+var i;
+
+for (i=0; i<10; i++){
+    if (i>5){
+        foo(i)
+    }
+}
+
+console.log(foo.count)
